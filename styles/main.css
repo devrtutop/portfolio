@@ -507,20 +507,30 @@ ul {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border: 1px solid var(--border);
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border: none;
   border-radius: var(--radius-sm);
-  color: var(--text-muted);
-  background: var(--surface);
-  transition: background var(--transition), color var(--transition);
+  color: #fff;
+  background: var(--dark);
+  box-shadow: var(--shadow);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.project-link::after {
+  content: '→';
+  font-weight: 700;
 }
 
 .project-link:hover {
-  background: var(--bg-alt);
-  color: var(--text);
+  background: #1e293b;
+  color: #fff;
   text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .project-card-body {
